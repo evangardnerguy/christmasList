@@ -8,7 +8,7 @@ body {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     line-height: 1.6;
     color: #333333;
-    background-color: #FFFFFF;
+    background-color:var(--black);
 }
 
 img {
@@ -26,10 +26,14 @@ ul {
     list-style: none;
 }
 
-/* Color Roots */
 
-
-
+:root {
+    --primary-red: #e14a4a;
+    --primary-purple: #301d54;
+    --text-yellow: #edf585;
+    --green-glow: #34d005;
+    --black: #000000;
+}
 /* Container */
 .container {
     max-width: 1400px;
@@ -43,8 +47,8 @@ ul {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(68, 234, 17, 0.5);
-    background-color: #e14a4a;
-    color: #732cf7;
+    background-color: var(--primary-red);
+    color: var(--primary-purple);
     font-size: 1.4rem;
 }
 
@@ -104,22 +108,17 @@ ul {
     margin: 0 auto 2rem;
 }
 
-
-
 .cards-section {
     padding: 4rem 0;
-    background-color: #301d54;
+    background-color: var(--primary-purple);
 }
 
 .section-title {
     text-align: center;
-    font-size: 2.5rem;
-    color: #edf585;
+    font-size: 2.6rem;
+    color: var(--text-yellow);
     margin-bottom: 2.8rem;
 }
-
-
-
 
 .cards-grid {
     display: grid;
@@ -127,11 +126,8 @@ ul {
     gap: 2rem;
 }
 
-/* ==================== INDIVIDUAL CARD STYLES ==================== */
-/* TODO: Style each card */
-
 .card {
-    background-color: #cd4a4a;
+    background-color: var(--primary-red);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -154,7 +150,89 @@ ul {
 }
 
 .card-content h3 {
-    color: #edf585;
+    color: var(--text-yellow);
     font-size: 1.5rem;
     margin-bottom: 1rem;
+}
+
+.card-content p {
+    color:var(--text-yellow);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    font-size: 1.1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--text-yellow);
+    color: var(--text-yellow);
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #dbcb83;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--text-yellow);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* =========================================== */
+@media screen and (min-width: 768px) {
+    
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;    
+    }
+
+}
+/* =========================================== */
+@media screen and (min-width: 1024px) {
+
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr)
+    }
+    
+    /* TODO: Change footer grid to 4 columns */
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* TODO: Increase hero heading size */
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+
 }
