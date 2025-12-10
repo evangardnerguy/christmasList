@@ -36,7 +36,7 @@ ul {
     --white: #ffffff;
     --green-dark: #18221c;
 }
-/* Container */
+
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -48,8 +48,8 @@ ul {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(68, 234, 17, 0.5);
-    background-color: var(--secondary-red);
+    box-shadow: 0 2px 5px rgba(255, 252, 54, 0.743);
+    background: linear-gradient(135deg, #b20b0b 50%, #7e0606 100%);
     color: var(--white);
     font-size: 1.4rem;
 }
@@ -138,7 +138,7 @@ ul {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(68, 234, 17, 0.7);
+    text-shadow: 2px 2px 4px rgba(255, 252, 54, 0.743);
     z-index: 2;
 }
 
@@ -174,16 +174,16 @@ ul {
 }
 
 .card {
-    background-color: var(--primary-red);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: all 0.3s ease;
+    background: linear-gradient(135deg, #f44848 50%, #bd1b1b 100%);
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(240, 71, 41, 0.736);
+    box-shadow: 0 8px 12px rgba(255, 252, 54, 0.743);
 }
 
 .card img {
@@ -245,17 +245,18 @@ ul {
 
 .btn-secondary:hover {
     background-color: var(--white);
-    transform: translateY(-2px);
-    box-shadow:0 5px 8px rgba(246, 221, 32, 0.733);
+    transform: translateY(-3px);
+    box-shadow:0 5px 8px rgba(255, 252, 54, 0.743);
 }
 .btn-tertiary {
     background-color: var(--text-yellow);
     color: var(--black);
+    float: right;
 }
 
 .btn-tertiary:hover {
     background-color: var(--white);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     box-shadow:0 5px 8px rgba(246, 221, 32, 0.733);
 }
 
@@ -281,13 +282,11 @@ ul {
     .cards-grid {
         grid-template-columns: repeat(3, 1fr)
     }
-    
-    /* TODO: Change footer grid to 4 columns */
+
     .footer-grid {
         grid-template-columns: repeat(4, 1fr);
     }
     
-    /* TODO: Increase hero heading size */
     .hero-content h1 {
         font-size: 4rem;
     }
