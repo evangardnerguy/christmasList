@@ -50,7 +50,7 @@ ul {
     z-index: 100;
     box-shadow: 0 2px 5px rgba(255, 252, 54, 0.743);
     background: linear-gradient(135deg, #b20b0b 50%, #7e0606 100%);
-    color: var(--white);
+    color: var(--text-yellow);
     font-size: 1.4rem;
 }
 
@@ -157,7 +157,7 @@ ul {
 
 .cards-section {
     padding: 4rem 0;
-    background-color: var(--green-dark);
+    background: linear-gradient(120deg, #0c2c02 50%, #031407 100%);;
 }
 
 .section-title {
