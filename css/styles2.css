@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color:var(--black);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================= COLORS ================= */
+:root {
+    --primary-red: #e14a4a;
+    --secondary-red: #b20b0b;
+    --primary-purple: #301d54;
+    --text-yellow: #edf585;
+    --green-glow: #34d005;
+    --black: #000000;
+    --white: #ffffff;
+    --green-dark: #18221c;
+    --light-purple: #e0bbff;
+}
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* ================= NAVBAR ================= */
+.navbar {
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(255, 252, 54, 0.743);
+    background: linear-gradient(135deg, #b20b0b 50%, #7e0606 100%);
+    color: var(--text-yellow);
+    font-size: 1.4rem;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    border-radius: 100px;
+}
+/* ================= NAV BUTTONS ================= */
+.home {
+    box-shadow: 0 4px 8px var(--black);
+    background: var(--secondary-red);
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 20px;
+    border: 3px solid var(--green-dark);
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+}
+
+.home:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
+.home:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+
+.tracker {
+    box-shadow: 0 4px 8px var(--black);
+    background: var(--secondary-red);
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 20px;
+    border: 3px solid var(--green-dark);
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+}
+
+.tracker:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
+.tracker:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;    
+    width: 100%;
+    max-height: 750px;
+    margin-bottom: 1.7rem;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;        
+    object-fit: cover;
+    object-position: center;  
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--white);
+    text-shadow:  0 4px 8px rgb(0, 0, 0);
+
+}
+
+.hero-content p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    background-color: var(--primary-purple);
+    border: 10px solid var(--secondary-red);
+    border-radius: 5px;
+    padding: 2rem;
+    color: var(--light-purple);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: linear-gradient(120deg, #0c2c02 50%, #3b3a0d 100%);
+    color: var(--white);
+    padding: 3rem 0;
+    margin-top: 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--text-yellow);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-copyright p,
+.footer-disclaimer p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* =========================================== */
+@media screen and (min-width: 768px) {
+    
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;    
+    }
+
+}
+/* =========================================== */
+@media screen and (min-width: 1024px) {
+
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+
+}
